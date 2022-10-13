@@ -51,15 +51,5 @@ for (size_t x = 1; x < size1+1; x++) {
 
   std::cout << "Distance is: " << graph[size1][size2] << '\n' << '\n';
 
-  std::cout << "Alignment is: " << '\n';
-
-  //Only going down or to corner
-  if (size1 >= size2) {
-    
-  }
-
-  std::cout << '\n';
-
   return 0;
 }
-
