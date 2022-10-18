@@ -51,5 +51,46 @@ for (size_t x = 1; x < size1+1; x++) {
 
   std::cout << "Distance is: " << graph[size1][size2] << '\n' << '\n';
 
+  std::cout << "Application is :" << '\n';
+
+  int x = 0;
+  int y = 0;
+  int inc = 0;
+
+  if (size1 >= size2) {
+    std::cout << word1 << '\n';
+    for (int i = 0; i <= size1 + 1; i++) {
+      if (graph[x][y] == graph[x+1][y+1]) {
+        x++;
+        y++;
+        }
+      else {
+        if (graph[x][y] + 1 == graph[x+1][y]) {
+          x++;
+          word1[inc] = '_';
+        }
+      }
+      inc++;
+    }
+    std::cout << word1 << '\n';
+  }
+  else {
+    std::cout << word2 << '\n';
+    for (int i = 0; i <= size2 + 1; i++) {
+      if (graph[x][y] == graph[x+1][y+1]) {
+        x++;
+        y++;
+        }
+      else {
+        if (graph[x][y] + 1 == graph[x][y+1]) {
+          y++;
+          word2[inc] = '_';
+        }
+      }
+      inc++;
+    }
+    std::cout << word2 << '\n';
+  }
+
   return 0;
 }
